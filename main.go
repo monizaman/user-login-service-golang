@@ -9,6 +9,7 @@ import (
 	"gorm.io/gorm"
 	"log"
 	"net/http"
+	"os"
 	"user-management-api/config"
 	"user-management-api/controllers"
 	"user-management-api/model"
@@ -49,8 +50,8 @@ func main() {
 	// Register Routes
 	UserRouteController.UserRoute(router)
 	http.Handle("/", router)
-
-	err := http.ListenAndServe(":"+viper.GetString("server.port"), nil)
+	port := os.Getenv("PORT")
+	err := http.ListenAndServe(":" + port, nil)
 	if err != nil {
 		log.Println("An error occurred starting HTTP listener at port " + viper.GetString("server.port"))
 		log.Println("Error: " + err.Error())
