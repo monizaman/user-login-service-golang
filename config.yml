@@ -5,7 +5,6 @@ auth:
   jwt_key: "supersecretkey"
   google_client_id: "875438776162-esdt0n9pco3ca81ulapg0rvhj891e338.apps.googleusercontent.com"
 
-
 database:
   db_tcp: "sql9.freemysqlhosting.net:3306"
   db_name: "sql9566088"
