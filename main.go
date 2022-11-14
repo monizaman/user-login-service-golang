@@ -28,7 +28,6 @@ var (
 
 func init() {
 	config.LoadAppConfig()
-	fmt.Println(viper.GetString("database.db_tcp"), "viper.GetString(database.db_tcp)")
 	ctx = context.TODO()
 	dsn := viper.GetString("database.db_user") + ":" + viper.GetString("database.db_password") +
 		"@tcp(" + viper.GetString("database.db_tcp") + ")/" + viper.GetString("database.db_name") + "?charset=utf8mb4&parseTime=true&loc=Local"
