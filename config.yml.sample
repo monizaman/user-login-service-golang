@@ -1,0 +1,12 @@
+server:
+  port: XXX
+
+auth:
+  jwt_key: "XXX"
+  google_client_id: "XXX"
+
+database:
+  db_tcp: "XXX"
+  db_name: "XXX"
+  db_user: "XXX"
+  db_password: "XXX"

@@ -1,0 +1,10 @@
+.idea
+.vscode
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.tmp
+*.iml
+config.yml
