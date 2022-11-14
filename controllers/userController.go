@@ -25,6 +25,12 @@ func NewUserController(propertyDetailsGinService service.UserService) UserContro
 	return UserController{propertyDetailsGinService}
 }
 
+func (u *UserController) HomeController(w http.ResponseWriter, r *http.Request) {
+	user := model.User{Email: "test@gmail.com"}
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(user)
+}
+
 func (u *UserController) LoginUserController(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	id := vars["id"]

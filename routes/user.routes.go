@@ -16,6 +16,7 @@ func NewPostControllerRoute(userController controllers.UserController) UserRoute
 
 func (r *UserRouteController) UserRoute(router *mux.Router) {
 	/*router.HandleFunc("/api/user/{id}", r.userController.LoginUserController).Methods("GET")*/
+	router.HandleFunc("/", r.userController.HomeController).Methods("GET")
 	router.HandleFunc("/api/registration", r.userController.CreateUserController).Methods("POST")
 	router.HandleFunc("/api/login", r.userController.GenerateToken).Methods("POST")
 	router.HandleFunc("/api/google-login", r.userController.GoogleLoginController).Methods("POST")

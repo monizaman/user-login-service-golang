@@ -1,18 +1,18 @@
 server:
-  port: 80
+  port: 8080
 
 auth:
   jwt_key: "supersecretkey"
   google_client_id: "875438776162-esdt0n9pco3ca81ulapg0rvhj891e338.apps.googleusercontent.com"
 
-#database:
-#  db_tcp: "127.0.0.1:3306"
-#  db_name: "user_management"
-#  db_user: "root"
-#  db_password: "@Moni01850118543"
-
 database:
-  db_tcp: "sql9.freemysqlhosting.net:3306"
-  db_name: "sql9566088"
-  db_user: "sql9566088"
-  db_password: "azgzRELW85"
+  db_tcp: "127.0.0.1:3306"
+  db_name: "user_management"
+  db_user: "root"
+  db_password: "@Moni01850118543"
+
+#database:
+#  db_tcp: "sql9.freemysqlhosting.net:3306"
+#  db_name: "sql9566088"
+#  db_user: "sql9566088"
+#  db_password: "azgzRELW85"
