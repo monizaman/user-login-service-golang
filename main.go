@@ -26,6 +26,7 @@ var (
 )
 
 func init() {
+	fmt.Println(viper.GetString("database.db_tcp"), "viper.GetString(database.db_tcp)")
 	config.LoadAppConfig()
 	ctx = context.TODO()
 	dsn := viper.GetString("database.db_user") + ":" + viper.GetString("database.db_password") +
